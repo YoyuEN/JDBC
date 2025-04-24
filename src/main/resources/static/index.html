@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家乡美食</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="/webjars/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-custom {
+            background-color: #ff6f61;
+        }
+        .navbar-custom .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-custom .nav-link {
+            color: white;
+        }
+        .food-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .food-card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fas fa-utensils me-2"></i>家乡美食</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 主内容 -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">欢迎来到家乡美食</h1>
+    <p class="text-center lead">这里有最地道的家乡味道，带你领略传统与现代的完美结合。</p>
+
+    <!-- 美食卡片 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card food-card h-100">
+                <img src="image/guoyou.jpg" class="card-img-top" alt="家乡特色菜">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/snack/guoyou">家乡特色菜</a></h5>
+                    <p class="card-text">这是一道传统的家乡特色菜，口感鲜美，回味无穷。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card food-card h-100">
+                <img src="image/miantiao.jpg" class="card-img-top" alt="手工面条">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/snack/miantiao">手工面条</a></h5>
+                    <p class="card-text">纯手工制作的面条，搭配浓郁的汤汁，令人垂涎欲滴。</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card food-card h-100">
+                <img src="image/gaodian.jpg" class="card-img-top" alt="传统糕点">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/snack/gaodian">传统糕点</a></h5>
+                    <p class="card-text">精选优质原料，精心制作的传统糕点，甜而不腻。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="mt-5">
+    <div class="container">
+        <p>&copy; 2025 家乡美食. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- 引入 jQuery -->
+<script src="/webjars/jquery/3.7.1/jquery.min.js"></script>
+<!-- 引入 Bootstrap JS -->
+<script src="/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
