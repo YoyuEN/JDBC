@@ -1,10 +1,11 @@
 package com.yoyuen.jdbc.service;
 
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
 import com.yoyuen.jdbc.entity.Book;
 
 import java.util.List;
-import java.util.Map;
 
 public interface BookService {
 
@@ -13,4 +14,6 @@ public interface BookService {
     void save(String name);
 
     List<Book> getAllBooksName();
+
+    public PageInfo<Book> findBookByPage(int page, int pageSize);
 }

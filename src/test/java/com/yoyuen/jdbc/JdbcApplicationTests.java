@@ -10,4 +10,7 @@ class JdbcApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    void selectBook() {}
+
 }
