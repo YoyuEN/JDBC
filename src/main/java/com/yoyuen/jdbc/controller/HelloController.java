@@ -31,11 +31,11 @@ public class HelloController {
         return "Hello World";
     }
 
-    @GetMapping("/user/{name}")
-    public String save(@PathVariable String name) {
-        bookService.save(name);
-        return name;
-    }
+//    @GetMapping("/user/{name}")
+//    public String save(@PathVariable String name) {
+//        bookService.save(name);
+//        return name;
+//    }
 
     @GetMapping("/list")
     public List<Book> list() {
@@ -43,15 +43,15 @@ public class HelloController {
         return books;
     }
 
-    @GetMapping("/auth")
-    public Authentication auth() {
-        SecurityContext context = SecurityContextHolder.getContext();
-        Authentication authentication = context.getAuthentication();
-        String username = authentication.getName();
-        Object principal = authentication.getPrincipal();
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-        return authentication;
-    }
+//    @GetMapping("/auth")
+//    public Authentication auth() {
+//        SecurityContext context = SecurityContextHolder.getContext();
+//        Authentication authentication = context.getAuthentication();
+//        String username = authentication.getName();
+//        Object principal = authentication.getPrincipal();
+//        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+//        return authentication;
+//    }
 
 
 }
